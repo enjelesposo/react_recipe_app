@@ -1,38 +1,46 @@
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
 }
-
-.App-link {
-  color: #61dafb;
+.search-form {
+  display: flex;
+  align-items: center;
+  height: 20vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-wrapper {
+  display: flex;
+  width: 380px;
+  max-width: 380px;
+  height: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.search-wrapper input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
+textarea:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+.search-wrapper button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 30px;
 }
